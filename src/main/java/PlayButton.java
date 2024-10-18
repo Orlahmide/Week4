@@ -109,15 +109,15 @@ public class PlayButton {
 
     public static void writeToCSV(String fileName, ArrayList<String> dataList, String filePath) throws IOException {
 
-        Writer wr = new FileWriter(filePath + fileName,true);
+        Writer wr = new FileWriter(filePath + fileName);
 
 
 
         try(
                 BufferedWriter bw = new BufferedWriter(wr)){
 
-            String header = "Name, Age, ID, Course Name, Location \n";
-            bw.write(header);
+//            String header = "Name, Age, ID, Course Name, Location \n";
+//            bw.write(header);
             for (String data : dataList) {
                 bw.write(data);
                 bw.newLine();
